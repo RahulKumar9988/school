@@ -7,8 +7,8 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-app.use('/api', schoolRoutes);
-app.use('/api', listRoute);
+app.use('/', schoolRoutes);
+app.use('/', listRoute);
 
-const PORT = 3003;
+const PORT = 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
